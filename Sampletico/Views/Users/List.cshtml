@@ -1,0 +1,41 @@
+﻿@model Sampletico.ViewModels.UserListViewModel
+
+
+<div class="page-header">
+    <h2><span class="glyphicon glyphicon-user"></span>User list
+        <a href="@Url.Action(MVC.Users.New())" class="pull-right btn btn-success">
+            <span class="glyphicon glyphicon-plus"></span>
+            Add new user
+        </a>
+    </h2>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Email</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{ var index = 1; }
+        @foreach (var user in Model.Users)
+        {
+            <tr>
+                <td>@(index++)</td>
+                <td>@user.Email</td>
+                <td>
+                    @if (user.IsAdmin)
+                    {
+                        <span class="label label-info">Admin</span>
+                    }
+                </td>
+                <td>
+                    <a href="@Url.Action(MVC.Users.Edit(user.Id))" class="btn btn-success">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

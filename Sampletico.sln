@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sampletico", "Sampletico\Sampletico.csproj", "{67F260C3-BCFA-4FC5-8568-06A49F8B3CA5}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SampleticoDB", "SampleticoDB\SampleticoDB.sqlproj", "{4611C7B0-06F1-416C-A293-BA619DE868FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sampletico.Core", "Sampletico.Core\Sampletico.Core.csproj", "{C35B6C2E-D13E-4D31-8818-E22A3FD0EF8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sampletico.Data", "Sampletico.Data\Sampletico.Data.csproj", "{CF288DF9-D121-421B-AD0C-C9FFC6628A37}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{0D6A277E-2D9A-4221-BAED-1E47948341E8}"
+	ProjectSection(SolutionItems) = preProject
+		AddMigration.ps1 = AddMigration.ps1
+		db.bat = db.bat
+		psake.ps1 = psake.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{A52978FD-97A9-4D31-BB7E-01500005B21E}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{F130720D-4C11-48F6-925C-2472BFB74F3B}"
+	ProjectSection(SolutionItems) = preProject
+		Build.proj = Build.proj
+		.build\MSBuild.Community.Tasks.dll = .build\MSBuild.Community.Tasks.dll
+		.build\MSBuild.Community.Tasks.targets = .build\MSBuild.Community.Tasks.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67F260C3-BCFA-4FC5-8568-06A49F8B3CA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67F260C3-BCFA-4FC5-8568-06A49F8B3CA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67F260C3-BCFA-4FC5-8568-06A49F8B3CA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67F260C3-BCFA-4FC5-8568-06A49F8B3CA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4611C7B0-06F1-416C-A293-BA619DE868FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4611C7B0-06F1-416C-A293-BA619DE868FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4611C7B0-06F1-416C-A293-BA619DE868FE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4611C7B0-06F1-416C-A293-BA619DE868FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4611C7B0-06F1-416C-A293-BA619DE868FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4611C7B0-06F1-416C-A293-BA619DE868FE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C35B6C2E-D13E-4D31-8818-E22A3FD0EF8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C35B6C2E-D13E-4D31-8818-E22A3FD0EF8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C35B6C2E-D13E-4D31-8818-E22A3FD0EF8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C35B6C2E-D13E-4D31-8818-E22A3FD0EF8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF288DF9-D121-421B-AD0C-C9FFC6628A37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF288DF9-D121-421B-AD0C-C9FFC6628A37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF288DF9-D121-421B-AD0C-C9FFC6628A37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF288DF9-D121-421B-AD0C-C9FFC6628A37}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

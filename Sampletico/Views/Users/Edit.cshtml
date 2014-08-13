@@ -1,0 +1,18 @@
+﻿@model Sampletico.ViewModels.UserEditViewModel
+
+@using (Html.BeginDataForm(MVC.Users.Edit(Model.Id)))
+{
+    <div class="form-group">
+        @Html.LabelFor(m=>m.Email)
+        @Html.DisplayTextFor(m=>m.Email)
+    </div>
+    
+    <div class="checkbox">
+        <label>
+            @Html.CheckBoxFor(m => m.IsAdmin) Is admin
+        </label>
+    </div>
+    
+    <button type="submit" class="btn btn-default">Save</button>
+    <a href="@Url.Action(MVC.Users.List())" class="btn btn-danger">Cancel</a>
+}

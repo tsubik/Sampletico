@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="bec7494c-8239-49c2-9478-908ba7f50c69" ChangeDateTime="08/13/2014 12:38:56">
+    <Property Name="ElementName" Value="[dbo].[FK_Tasks_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[Tasks]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Tasks_ToUsers]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ead6b228-0da0-4166-9e80-be6be92b2d16" ChangeDateTime="08/13/2014 12:39:15">
+    <Property Name="ElementName" Value="[dbo].[FK_Tasks_ToUsers]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[Tasks]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Tasks_ToCreatedByUsers]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7f0a437f-3171-4043-9d68-9da6245264ca" ChangeDateTime="08/13/2014 12:39:23">
+    <Property Name="ElementName" Value="[dbo].[FK_Tasks_ToUsers]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[Tasks]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Tasks_ToAssignedToUsers]" />
+  </Operation>
+</Operations>

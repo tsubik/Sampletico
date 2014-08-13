@@ -1,0 +1,68 @@
+﻿@using Sampletico.Helpers
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="@Url.Content("~/Content/bootstrap.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/bootstrap-theme.css")" />
+    <title>Sampletico</title>
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="navbar navbar-default navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Sampletico</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        @if(User.Identity.IsAuthenticated)
+                        {
+                            @Html.MenuLink("Users", MVC.Users.List())   
+                        }
+                        else{
+                            @Html.MenuLink("Home", MVC.Home.Index())
+                        }
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        @if(!User.Identity.IsAuthenticated)
+                        {
+                            @Html.MenuLink("Log In", MVC.Home.SignIn())
+                            @Html.MenuLink("Register", MVC.Home.SignUp())
+                        }
+                        else{
+                            <li><a href="@Url.Action(MVC.Home.SignOut())">Sign out</a></li>
+                        }
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+            @RenderBody()
+        </div>
+        <div class="push"></div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p class="muted">
+                &copy; 2013 <a href="http://tsubik.com">Tomasz Subik</a>.
+      View source on <a href="https://github.com/tsubik/splitr">GitHub</a>.
+            </p>
+        </div>
+    </div>
+    <script src="@Url.Content("~/Scripts/jquery-1.9.0.js")"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap.js")"></script>
+</body>
+</html>

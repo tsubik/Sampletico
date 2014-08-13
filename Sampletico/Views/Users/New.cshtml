@@ -1,0 +1,28 @@
+﻿@model Sampletico.ViewModels.UserNewViewModel
+
+@using (Html.BeginDataForm(MVC.Home.SignUp()))
+{
+    <div class="form-group" @(!ViewData.ModelState.IsValidField("Email") ? "has-error" : string.Empty)>
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email", placeholder = "Enter email" })
+        @Html.ValidationMessageFor(m => m.Email, null, new { @class = "help-inline" })
+    </div>
+    <div class="form-group @(!ViewData.ModelState.IsValidField("Password") ? "has-error" : string.Empty)">
+        @Html.LabelFor(m => m.Password)
+        @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+        @Html.ValidationMessageFor(m => m.Password, null, new { @class = "help-inline" })
+    </div>
+    <div class="form-group @(!ViewData.ModelState.IsValidField("PasswordConfirmation") ? "has-error" : string.Empty)">
+        @Html.LabelFor(m => m.PasswordConfirmation)
+        @Html.PasswordFor(m => m.PasswordConfirmation, new { @class = "form-control", placeholder = "Retype password" })
+        @Html.ValidationMessageFor(m => m.PasswordConfirmation, null, new { @class = "help-inline" })
+    </div>
+    <div class="checkbox">
+        <label>
+            @Html.CheckBoxFor(m=>m.IsAdmin) Is admin
+        </label>
+    </div>
+    
+    <button type="submit" class="btn btn-success">Save</button>
+    <a href="@Url.Action(MVC.Users.List())" class="btn btn-danger">Cancel</a>
+}
